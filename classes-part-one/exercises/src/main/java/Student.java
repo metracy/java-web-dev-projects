@@ -6,5 +6,11 @@ public class Student {
 
         // Drop your getters and setters below for the Student class.
         // To instantiate the Student class, add your code to the main in the file, SchoolPractice.
+        Student student = new Student("Matt T", 12345, 1, 4.0);
+}
 
+public class Course {
+        private String topic;
+        private Teacher instructor;
+        private ArrayList<Student> enrolledStudents;
 }
