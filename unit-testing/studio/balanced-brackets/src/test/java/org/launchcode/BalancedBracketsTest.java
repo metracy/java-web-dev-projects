@@ -6,56 +6,56 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BalancedBracketsTest {
     @Test
-    public void onlyBrackets() {
+    public void onlyBracketsReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[]"));
     }
     @Test
-    public void reversedBrackets() {
+    public void reversedBracketsReturnsFalse() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
     }
     @Test
-    public void nestedBrackets() {
+    public void nestedBracketsReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[[Launch]Code]"));
     }
     @Test
-    public void threeLeftClosingBracket() {
+    public void threeLeftClosingBracketReturnsFalse() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("[[["));
     }
     @Test
-    public void missingClosingBracket() {
+    public void missingClosingBracketReturnsFalse() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("[LaunchCode"));
     }
     @Test
-    public void unbalancedOpeningBrackets() {
+    public void unbalancedOpeningBracketsReturnsFalse() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("[[LaunchCode]"));
     }
     @Test
-    public void noBrackets() {
+    public void noBracketsReturnsFalse() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("LaunchCode"));
     }
     @Test
-    public void specialCharacters() {
+    public void specialCharactersReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[!@#$$%^&*()]"));
     }
     @Test
-    public void multipleBalancedBrackets() {
+    public void multipleBalancedBracketsReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets("[[]][]"));
     }
     @Test
-    public void singleOpeningBracket() {
+    public void singleOpeningBracketReturnsFalse() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("["));
     }
     @Test
-    public void emptyString() {
+    public void emptyStringReturnsTrue() {
         assertTrue(BalancedBrackets.hasBalancedBrackets(""));
     }
     @Test
-    public void singleClosingBracket() {
+    public void singleClosingBracketReturnsFalse() {
         assertFalse(BalancedBrackets.hasBalancedBrackets("]"));
     }
 
     @Test
-    public void emptyTest() {
+    public void emptyTestReturnsTrue() {
         assertEquals(true, true);
     }
 }
