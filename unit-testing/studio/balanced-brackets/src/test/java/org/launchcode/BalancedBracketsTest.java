@@ -35,7 +35,7 @@ class BalancedBracketsTest {
     }
     @Test
     public void specialCharactersReturnsTrue() {
-        assertTrue(BalancedBrackets.hasBalancedBrackets("[!@#$$%^&*()]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("!!@#ÿšdðá$$%^&*()%^&[!@#ÿšdðá]$$%^&*())"));
     }
     @Test
     public void multipleBalancedBracketsReturnsTrue() {
